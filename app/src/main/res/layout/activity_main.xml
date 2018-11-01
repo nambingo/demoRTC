@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <org.webrtc.SurfaceViewRenderer
+            android:id="@+id/remote_gl_surface_view"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:layout_height="match_parent" />
+
+        <org.webrtc.SurfaceViewRenderer
+            android:id="@+id/local_gl_surface_view"
+            android:layout_width="match_parent"
+            android:layout_gravity="bottom|end"
+            android:layout_height="match_parent" />
+
+
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_margin="5dp"
+            android:layout_height="60dp"
+            android:id="@+id/end_call"
+            android:src="@drawable/ic_launcher_background"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvCalling"
+            android:text="Calling..."
+            android:textColor="#FFF"
+            android:textSize="20sp"/>
+    </LinearLayout>
+</FrameLayout>
